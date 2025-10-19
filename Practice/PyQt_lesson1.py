@@ -7,7 +7,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("Lesson 1")
         self.setGeometry(100, 300, 900, 500) # x; y width; height
-        self.setWindowIcon(QIcon('man.jpeg'))
+        self.setWindowIcon(QIcon('pics/man.jpeg'))
 
 
 def main():
