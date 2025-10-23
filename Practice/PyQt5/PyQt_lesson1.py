@@ -3,7 +3,7 @@ import os
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QIcon
 
-man_path = os.path.join('\VScode\Python\Rabota11\edu\Practice\PyQt5\pics\man.jpeg')
+man_path = os.path.join('/VScode/Python/Rabota11/edu/Practice/PyQt5/pics/man.jpeg') #Have some problems with image's path
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -16,7 +16,7 @@ class MainWindow(QMainWindow):
 def main():
     app = QApplication(sys.argv) # Creates app manager "sys.argv" called app
     window = MainWindow()
-    window.show()
+    window.show
     sys.exit(app.exec_()) # Executes exit after closing window
 
 if __name__ == "__main__":
