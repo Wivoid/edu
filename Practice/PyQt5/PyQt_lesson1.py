@@ -16,7 +16,7 @@ class MainWindow(QMainWindow):
 def main():
     app = QApplication(sys.argv) # Creates app manager "sys.argv" called app
     window = MainWindow()
-    window.show
+    window.show()
     sys.exit(app.exec_()) # Executes exit after closing window
 
 if __name__ == "__main__":

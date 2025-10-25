@@ -20,16 +20,16 @@ class MainWindow(QMainWindow):
         label4 = QLabel("Water", self)
         label5 = QLabel("Wassabi", self)
 
-        font_label = QFont('Sans', 30)
-        font_label.setBold(True)
+        font_label = QFont('Sans', 30) # Creating font pattern
+        font_label.setBold(True) # Setting it bold
 
-        label1.setFont(font_label)
+        label1.setFont(font_label) # Connecting it
         label2.setFont(font_label)
         label3.setFont(font_label)
         label4.setFont(font_label)
         label5.setFont(font_label)
 
-        label1.setStyleSheet('background-color: red;') 
+        label1.setStyleSheet('background-color: red;') # Some appearance
         label2.setStyleSheet('background-color: blue;')
         label3.setStyleSheet('background-color: pink;')
         label4.setStyleSheet('background-color: purple;')
@@ -43,7 +43,7 @@ class MainWindow(QMainWindow):
 
         vbox = QVBoxLayout() # simplfying vbox layout
 
-        vbox.addWidget(label1)
+        vbox.addWidget(label1) # Adding labels to widget
         vbox.addWidget(label2)
         vbox.addWidget(label3)
         vbox.addWidget(label4)
