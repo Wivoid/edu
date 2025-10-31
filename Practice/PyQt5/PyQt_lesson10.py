@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QLabel,QHBoxLayout, QPushButt
 from PyQt5.QtCore import Qt, QTimer, QTime
 from PyQt5.QtGui import QFont, QFontDatabase
 
-font_path = os.path.join('/VScode/Python/Rabota11/edu/Practice/PyQt5/pics/DS-DIGIT.TTF')
+font_path = os.path.join('/VScode/Python/Rabota11/edu/Practice/PyQt5/pics/DS-DIGIT.TTF') # path to our font
 
 class Clock(QWidget):
     def __init__(self):
@@ -19,11 +19,11 @@ class Clock(QWidget):
 
         self.stop_button.setStyleSheet('color: green;'
                                         'text-align: center;'
-                                        'font-size: 150px')
+                                        'font-size: 150px') # Button's stylesheet
         self.setStyleSheet('background-color: black;')
         self.time_label.setStyleSheet('color: hsl(128, 100%, 50%);')
         
-        font_id = QFontDatabase.addApplicationFont(font_path) # Connects font
+        font_id = QFontDatabase.addApplicationFont('Practice/PyQt5/pics/DS-DIGIT.TTF') # Connects font
         font_family = QFontDatabase.applicationFontFamilies(font_id)[0] # Creates family and connects it to number in list [0]
         my_font = QFont(font_family, 150) # Setting font properties
         self.time_label.setFont(my_font) # Setting the font itself
@@ -36,7 +36,7 @@ class Clock(QWidget):
 
         hbox = QHBoxLayout()
         hbox.addWidget(self.time_label)
-        hbox.addWidget(self.stop_button)
+        hbox.addWidget(self.stop_button) # add button to widget
         self.setLayout(hbox)
 
         self.time_label.setAlignment(Qt.AlignHCenter)
