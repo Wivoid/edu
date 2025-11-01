@@ -152,14 +152,26 @@ class StopWatch(QWidget):
         self.time_label.setText(self.format_time(self.time))
 
     def speed_up(self):
-        if self.interval == 5:
+        if self.interval == 10:
             self.timer.stop()
+            self.start_button.setText("Start")
+            self.restart_button.setText("Restart")
+            self.interval = 5
+            self.speedup_button.setText("x2 Speed")
+
+        elif self.interval == 5:
+            self.timer.stop()
+            self.start_button.setText("Start")
+            self.restart_button.setText("Restart")
+            self.interval = 1
+            self.speedup_button.setText("x4 Speed")
+
+        elif self.interval == 1:
+            self.timer.stop()
+            self.start_button.setText("Start")
+            self.restart_button.setText("Restart")
             self.interval = 10
             self.speedup_button.setText("Speed Up")
-        else:
-            self.timer.stop()
-            self.interval = self.interval // 2
-            self.speedup_button.setText("x2 Speed")
 
 
     def update_display(self):
